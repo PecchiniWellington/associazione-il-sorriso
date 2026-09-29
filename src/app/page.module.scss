@@ -1,29 +1,3 @@
-// Due nastri incrociati tra l'hero e la prima sezione.
-.ribbons {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  margin-block: -40px -20px;
-  overflow: hidden;
-  padding-block: 40px;
-}
-
-.back,
-.front {
-  grid-area: 1 / 1;
-  width: 110%;
-  margin-left: -5%;
-}
-
-.back {
-  transform: rotate(2.5deg);
-  box-shadow: inset 0 0 0 2px var(--black);
-}
-
-.front {
-  transform: rotate(-2deg);
-}
-
 .mapHead {
   display: grid;
   gap: 20px;

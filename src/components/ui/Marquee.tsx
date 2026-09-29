@@ -2,7 +2,7 @@
 
 import { Fragment, useRef } from "react";
 import { SmileMark } from "@/components/brand/SmileMark";
-import { gsap, MOTION_OK, ScrollTrigger, useGSAP } from "@/lib/gsap";
+import { gsap, MOTION_OK, useGSAP } from "@/lib/gsap";
 import styles from "./Marquee.module.scss";
 
 type MarqueeProps = {
@@ -15,7 +15,6 @@ type MarqueeProps = {
 /**
  * Testo che scorre all'infinito. La striscia contiene il testo due volte:
  * spostandola di metà della sua larghezza il giro si chiude senza stacchi.
- * Scorrendo la pagina velocemente, anche il nastro accelera.
  */
 export function Marquee({
   items,
@@ -29,29 +28,16 @@ export function Marquee({
     () => {
       const mm = gsap.matchMedia();
       mm.add(MOTION_OK, () => {
-        const loop = gsap.fromTo(
+        gsap.fromTo(
           "[data-track]",
           { xPercent: reverse ? -50 : 0 },
           {
             xPercent: reverse ? 0 : -50,
-            duration: 40,
+            duration: 30,
             ease: "none",
             repeat: -1,
           }
         );
-
-        ScrollTrigger.create({
-          trigger: root.current,
-          start: "top bottom",
-          end: "bottom top",
-          onUpdate: (self) => {
-            const boost = 1 + Math.min(Math.abs(self.getVelocity()) / 250, 6);
-            gsap
-              .timeline()
-              .to(loop, { timeScale: boost, duration: 0.2, overwrite: true })
-              .to(loop, { timeScale: 1, duration: 1.2, ease: "power2.out" });
-          },
-        });
       });
     },
     { scope: root }

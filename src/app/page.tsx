@@ -18,15 +18,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <div className={styles.ribbons}>
-        <Marquee
-          items={slogans}
-          tone="yellow"
-          reverse
-          className={styles.back}
-        />
-        <Marquee items={slogans} className={styles.front} />
-      </div>
+      <Marquee items={slogans} tone="yellow" />
       <Intro />
       <ProjectsRail />
       <WaysToHelp />
