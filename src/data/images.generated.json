@@ -1,0 +1,730 @@
+{
+  "chi-siamo/gruppo-2023": {
+    "width": 1600,
+    "height": 811
+  },
+  "chi-siamo/storia": {
+    "width": 1350,
+    "height": 1800
+  },
+  "eventi/elisa-lupi-buffalora": {
+    "width": 607,
+    "height": 456
+  },
+  "eventi/mercatino-natale-2024": {
+    "width": 1273,
+    "height": 1800
+  },
+  "gallery/bambini-farfalla/01": {
+    "width": 960,
+    "height": 540
+  },
+  "gallery/bambini-farfalla/02": {
+    "width": 528,
+    "height": 960
+  },
+  "gallery/bambini-farfalla/03": {
+    "width": 925,
+    "height": 584
+  },
+  "gallery/burkina/01": {
+    "width": 1350,
+    "height": 1800
+  },
+  "gallery/burkina/02": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/burkina/03": {
+    "width": 1800,
+    "height": 773
+  },
+  "gallery/burkina/04": {
+    "width": 1350,
+    "height": 1800
+  },
+  "gallery/burkina/05": {
+    "width": 1350,
+    "height": 1800
+  },
+  "gallery/burkina/06": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/burkina/07": {
+    "width": 1800,
+    "height": 364
+  },
+  "gallery/clown-in-ospedale/01": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/clown-in-ospedale/02": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/clown-in-ospedale/03": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/clown-in-ospedale/04": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/clown-in-ospedale/05": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/clown-in-ospedale/06": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/01": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/discarica-catadores/02": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/03": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/04": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/05": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/06": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/07": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/discarica-catadores/08": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/discarica-catadores/09": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/giriteka/01-ragazzi-accolti": {
+    "width": 1276,
+    "height": 521
+  },
+  "gallery/giriteka/02-arrivo-al-centro": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/giriteka/03-arrivo-al-centro": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/giriteka/04-rifiuto-famiglia": {
+    "width": 1280,
+    "height": 768
+  },
+  "gallery/giriteka/05-rifiuto-famiglia": {
+    "width": 1280,
+    "height": 768
+  },
+  "gallery/giriteka/06-cucito": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/giriteka/07-parrucchiere": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/giriteka/08-forneria": {
+    "width": 1280,
+    "height": 768
+  },
+  "gallery/giriteka/09-scuola": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/giriteka/10-tamburi": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/giriteka/11-accoglienza-riuscita": {
+    "width": 968,
+    "height": 1143
+  },
+  "gallery/giriteka/12-vita-serena": {
+    "width": 1280,
+    "height": 806
+  },
+  "gallery/giriteka/13-scuola-secondaria": {
+    "width": 1280,
+    "height": 960
+  },
+  "gallery/mutirao/01": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/mutirao/02": {
+    "width": 1600,
+    "height": 1200
+  },
+  "gallery/mutirao/03": {
+    "width": 1588,
+    "height": 356
+  },
+  "gallery/mutirao/04": {
+    "width": 1350,
+    "height": 1800
+  },
+  "gallery/mutirao/05": {
+    "width": 1800,
+    "height": 1350
+  },
+  "gallery/mutirao/06": {
+    "width": 960,
+    "height": 720
+  },
+  "gallery/senegal/01": {
+    "width": 1024,
+    "height": 684
+  },
+  "gallery/senegal/02": {
+    "width": 1024,
+    "height": 684
+  },
+  "home/bambini-africa": {
+    "width": 1350,
+    "height": 1800
+  },
+  "home/bambini-brasile": {
+    "width": 1600,
+    "height": 1200
+  },
+  "home/burkina": {
+    "width": 1350,
+    "height": 1800
+  },
+  "home/mani-sorriso": {
+    "width": 1800,
+    "height": 1273
+  },
+  "mappa/mondo": {
+    "width": 1280,
+    "height": 720
+  },
+  "progetti/impariamo-sorridendo/2023-11-01": {
+    "width": 1280,
+    "height": 720
+  },
+  "progetti/impariamo-sorridendo/2023-11-02": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/impariamo-sorridendo/2023-11-03": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/impariamo-sorridendo/2023-11-04": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/impariamo-sorridendo/2023-11-05": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/impariamo-sorridendo/2023-11-06": {
+    "width": 1280,
+    "height": 720
+  },
+  "progetti/impariamo-sorridendo/2023-11-07": {
+    "width": 1280,
+    "height": 720
+  },
+  "progetti/impariamo-sorridendo/2023-11-08": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/impariamo-sorridendo/2024-03-01": {
+    "width": 629,
+    "height": 283
+  },
+  "progetti/impariamo-sorridendo/2024-03-02": {
+    "width": 302,
+    "height": 395
+  },
+  "progetti/impariamo-sorridendo/2024-12-01": {
+    "width": 960,
+    "height": 1280
+  },
+  "progetti/impariamo-sorridendo/2024-12-02": {
+    "width": 960,
+    "height": 1280
+  },
+  "progetti/impariamo-sorridendo/cover": {
+    "width": 421,
+    "height": 316
+  },
+  "progetti/impariamo-sorridendo/progetto-01": {
+    "width": 1280,
+    "height": 960
+  },
+  "progetti/impariamo-sorridendo/progetto-02": {
+    "width": 1032,
+    "height": 774
+  },
+  "progetti/impariamo-sorridendo/progetto-03": {
+    "width": 750,
+    "height": 909
+  },
+  "progetti/impariamo-sorridendo/progetto-04": {
+    "width": 1600,
+    "height": 719
+  },
+  "progetti/impariamo-sorridendo/progetto-05": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/impariamo-sorridendo/progetto-06": {
+    "width": 1600,
+    "height": 719
+  },
+  "progetti/impariamo-sorridendo/progetto-07": {
+    "width": 1600,
+    "height": 719
+  },
+  "progetti/newlife/2023-11-commozione": {
+    "width": 1800,
+    "height": 1350
+  },
+  "progetti/newlife/2023-11-diplomi": {
+    "width": 1800,
+    "height": 1353
+  },
+  "progetti/newlife/2023-11-discorso": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/newlife/2023-11-elisa-lupi": {
+    "width": 1200,
+    "height": 1599
+  },
+  "progetti/newlife/2023-11-scuola-cucina": {
+    "width": 1800,
+    "height": 1355
+  },
+  "progetti/newlife/2023-11-scuola-estetica": {
+    "width": 960,
+    "height": 1280
+  },
+  "progetti/newlife/2023-11-scuola-panificazione": {
+    "width": 1353,
+    "height": 1800
+  },
+  "progetti/newlife/2023-11-scuola-parrucchiere": {
+    "width": 971,
+    "height": 1600
+  },
+  "progetti/newlife/2024-03-01": {
+    "width": 591,
+    "height": 444
+  },
+  "progetti/newlife/2024-03-02": {
+    "width": 607,
+    "height": 456
+  },
+  "progetti/newlife/2024-12-01": {
+    "width": 800,
+    "height": 599
+  },
+  "progetti/newlife/2024-12-02": {
+    "width": 800,
+    "height": 598
+  },
+  "progetti/newlife/2024-12-03": {
+    "width": 800,
+    "height": 600
+  },
+  "progetti/newlife/2024-12-04": {
+    "width": 387,
+    "height": 597
+  },
+  "progetti/newlife/2024-12-05": {
+    "width": 440,
+    "height": 600
+  },
+  "progetti/newlife/2024-12-06": {
+    "width": 382,
+    "height": 600
+  },
+  "progetti/newlife/2024-12-07": {
+    "width": 800,
+    "height": 600
+  },
+  "progetti/newlife/2024-12-08": {
+    "width": 800,
+    "height": 588
+  },
+  "progetti/newlife/githurai45": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/newlife/progetto-01": {
+    "width": 1600,
+    "height": 1200
+  },
+  "progetti/newlife/progetto-02": {
+    "width": 1800,
+    "height": 1355
+  },
+  "progetti/newlife/progetto-03": {
+    "width": 1800,
+    "height": 1355
+  },
+  "progetti/newlife/progetto-04": {
+    "width": 720,
+    "height": 1600
+  },
+  "progetti/newlife/progetto-05": {
+    "width": 1800,
+    "height": 1355
+  },
+  "progetti/newlife/progetto-06": {
+    "width": 1800,
+    "height": 1355
+  },
+  "progetti/ninos-esperanza/cover": {
+    "width": 1748,
+    "height": 1240
+  },
+  "progetti/ninos-esperanza/progetto-01": {
+    "width": 1748,
+    "height": 1240
+  },
+  "progetti/ninos-esperanza/progetto-02": {
+    "width": 1200,
+    "height": 1600
+  },
+  "progetti/ninos-esperanza/progetto-03": {
+    "width": 1748,
+    "height": 1240
+  },
+  "progetti/ninos-esperanza/progetto-04": {
+    "width": 1747,
+    "height": 1240
+  },
+  "regali/bomboniere-cover": {
+    "width": 1800,
+    "height": 1013
+  },
+  "regali/bomboniere/01": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/02": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/03": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/04": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/05": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/bomboniere/06": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/bomboniere/07": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/08": {
+    "width": 1800,
+    "height": 1013
+  },
+  "regali/bomboniere/09": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/bomboniere/10": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/bomboniere/11": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/12": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/13": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/14": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/15": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/16": {
+    "width": 1709,
+    "height": 611
+  },
+  "regali/bomboniere/17": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/18": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/19": {
+    "width": 1800,
+    "height": 1350
+  },
+  "regali/bomboniere/20": {
+    "width": 800,
+    "height": 600
+  },
+  "regali/bomboniere/21": {
+    "width": 1600,
+    "height": 1200
+  },
+  "regali/bomboniere/22": {
+    "width": 1800,
+    "height": 1013
+  },
+  "regali/bomboniere/23": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/bomboniere/24": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/bomboniere/25": {
+    "width": 1800,
+    "height": 1013
+  },
+  "regali/bomboniere/26": {
+    "width": 1521,
+    "height": 1800
+  },
+  "regali/idee-regalo/01": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/idee-regalo/02": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/idee-regalo/03": {
+    "width": 1600,
+    "height": 1200
+  },
+  "regali/idee-regalo/04": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/idee-regalo/05": {
+    "width": 1002,
+    "height": 1600
+  },
+  "regali/idee-regalo/06": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/idee-regalo/07": {
+    "width": 705,
+    "height": 709
+  },
+  "regali/idee-regalo/08": {
+    "width": 658,
+    "height": 668
+  },
+  "regali/idee-regalo/09": {
+    "width": 746,
+    "height": 728
+  },
+  "regali/idee-regalo/10": {
+    "width": 1079,
+    "height": 534
+  },
+  "regali/idee-regalo/11": {
+    "width": 1080,
+    "height": 1319
+  },
+  "regali/idee-regalo/12": {
+    "width": 1080,
+    "height": 1425
+  },
+  "regali/idee-regalo/13": {
+    "width": 1080,
+    "height": 1435
+  },
+  "regali/idee-regalo/14": {
+    "width": 1079,
+    "height": 1410
+  },
+  "regali/idee-regalo/15": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/idee-regalo/16": {
+    "width": 570,
+    "height": 760
+  },
+  "regali/idee-regalo/17": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/idee-regalo/18": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/idee-regalo/19": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/idee-regalo/20": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/natale/01": {
+    "width": 1080,
+    "height": 590
+  },
+  "regali/natale/02": {
+    "width": 900,
+    "height": 1800
+  },
+  "regali/natale/03": {
+    "width": 993,
+    "height": 545
+  },
+  "regali/natale/04": {
+    "width": 900,
+    "height": 1800
+  },
+  "regali/natale/05": {
+    "width": 900,
+    "height": 1800
+  },
+  "regali/natale/06": {
+    "width": 900,
+    "height": 1800
+  },
+  "regali/natale/07": {
+    "width": 1079,
+    "height": 1410
+  },
+  "regali/natale/08": {
+    "width": 1079,
+    "height": 1701
+  },
+  "regali/natale/09": {
+    "width": 1080,
+    "height": 546
+  },
+  "regali/natale/10": {
+    "width": 695,
+    "height": 608
+  },
+  "regali/natale/11": {
+    "width": 1079,
+    "height": 522
+  },
+  "regali/natale/12": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/natale/13": {
+    "width": 900,
+    "height": 1600
+  },
+  "regali/natale/14": {
+    "width": 900,
+    "height": 1600
+  },
+  "regali/natale/15": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/natale/16": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/natale/17": {
+    "width": 1352,
+    "height": 636
+  },
+  "regali/natale/18": {
+    "width": 1137,
+    "height": 466
+  },
+  "regali/natale/19": {
+    "width": 1013,
+    "height": 1800
+  },
+  "regali/natale/20": {
+    "width": 1600,
+    "height": 1200
+  },
+  "regali/natale/21": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/natale/22": {
+    "width": 1600,
+    "height": 1102
+  },
+  "regali/natale/23": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/natale/24": {
+    "width": 1005,
+    "height": 1600
+  },
+  "regali/natale/25": {
+    "width": 1600,
+    "height": 1200
+  },
+  "regali/natale/26": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/natale/27": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/natale/28": {
+    "width": 1350,
+    "height": 1800
+  },
+  "regali/natale/29": {
+    "width": 1200,
+    "height": 1600
+  },
+  "regali/natale/30": {
+    "width": 1600,
+    "height": 1200
+  }
+}

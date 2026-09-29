@@ -1,0 +1,92 @@
+@use "../../styles/mixins" as *;
+
+.head {
+  display: grid;
+  gap: 20px;
+  margin-bottom: clamp(48px, 7vw, 88px);
+
+  h2 {
+    max-width: 12ch;
+  }
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+
+  @include up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: clamp(28px, 3vw, 40px);
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: 0 2px 0 var(--black);
+  transition:
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out);
+
+  &:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 14px 0 var(--black);
+  }
+
+  @include up(md) {
+    &:nth-child(2) {
+      margin-top: 48px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 96px;
+    }
+  }
+}
+
+.word {
+  font-size: clamp(2.4rem, 1.8rem + 2vw, 3.4rem);
+  line-height: 1;
+  transform: rotate(-4deg);
+  transform-origin: left center;
+}
+
+.number {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.text {
+  color: var(--muted);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--black);
+  justify-self: start;
+  padding-bottom: 2px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s var(--ease-out);
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}

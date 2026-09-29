@@ -1,0 +1,81 @@
+@use "../../styles/mixins" as *;
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.bgMark {
+  --smile-face: rgb(255 255 255 / 22%);
+  --smile-ink: rgb(11 11 11 / 6%);
+
+  position: absolute;
+  right: -12vw;
+  top: -10vw;
+  width: 55vw;
+  max-width: 760px;
+  pointer-events: none;
+}
+
+.title {
+  position: relative;
+  margin: 20px 0 clamp(40px, 6vw, 72px);
+  max-width: 10ch;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  gap: 16px;
+
+  @include up(md) {
+    grid-template-columns: 1fr 1.3fr 1fr;
+  }
+}
+
+.box {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 10px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.4rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.iban {
+  font-size: clamp(1.1rem, 0.9rem + 0.8vw, 1.55rem);
+  word-spacing: 0.1em;
+}
+
+.reason {
+  font-size: 0.95rem;
+}
+
+.more {
+  display: grid;
+  align-content: space-between;
+  justify-items: start;
+  gap: 20px;
+  padding: 28px;
+  border: 2px solid var(--black);
+  border-radius: var(--radius);
+  font-weight: 500;
+}

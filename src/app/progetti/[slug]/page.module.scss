@@ -1,0 +1,259 @@
+@use "../../../styles/mixins" as *;
+
+.hero {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: min(100svh, 900px);
+  padding-top: calc(var(--header-height) + 80px);
+  padding-bottom: clamp(40px, 6vw, 80px);
+  overflow: hidden;
+  background: var(--black);
+  color: var(--paper);
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(11 11 11 / 35%) 0%,
+      rgb(11 11 11 / 10%) 35%,
+      rgb(11 11 11 / 85%) 100%
+    );
+  }
+}
+
+.heroText {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+
+  :global(.eyebrow)::before {
+    background: var(--yellow);
+  }
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px 8px 8px;
+  border-radius: 999px;
+  background: rgb(255 253 245 / 14%);
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    background: var(--yellow);
+    color: var(--black);
+  }
+}
+
+.tagline {
+  max-width: 34ch;
+}
+
+.facts {
+  display: grid;
+  gap: 1px;
+  padding-block: clamp(32px, 5vw, 56px);
+
+  @include up(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  li {
+    display: grid;
+    gap: 4px;
+    padding-block: 12px;
+    border-bottom: 2px solid var(--black);
+
+    @include up(md) {
+      border-bottom: 0;
+      border-left: 2px solid var(--black);
+      padding: 0 0 0 24px;
+    }
+  }
+}
+
+.factValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 1.6rem + 2.6vw, 4rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.excerpt {
+  max-width: 44ch;
+  margin-bottom: clamp(56px, 8vw, 96px);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 1rem + 1.5vw, 2.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.block {
+  display: grid;
+  gap: 24px;
+  padding-block: clamp(32px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+
+  @include up(md) {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 64px;
+
+    h2 {
+      position: sticky;
+      top: calc(var(--header-height) + 24px);
+      align-self: start;
+    }
+  }
+}
+
+.blockBody {
+  display: grid;
+  gap: 18px;
+  max-width: 64ch;
+  font-size: 1.1rem;
+}
+
+.items {
+  display: grid;
+  gap: 12px;
+
+  li {
+    display: grid;
+    gap: 2px;
+    padding: 18px 20px 18px 56px;
+    border-radius: var(--radius-sm);
+    background: var(--cream);
+    position: relative;
+
+    &::before {
+      content: ":)";
+      position: absolute;
+      left: 18px;
+      top: 16px;
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--yellow);
+      font-size: 0.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+  }
+
+  strong {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+  }
+}
+
+.galleryTitle {
+  margin-bottom: 32px;
+}
+
+.updatesHead {
+  display: grid;
+  gap: 16px;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.updates {
+  display: grid;
+  gap: clamp(56px, 8vw, 96px);
+}
+
+.update {
+  display: grid;
+  gap: 20px;
+
+  @include up(md) {
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+  }
+}
+
+.updateMeta {
+  @include up(md) {
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+    align-self: start;
+  }
+}
+
+.date {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--black);
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.updateBody {
+  display: grid;
+  gap: 18px;
+  max-width: 900px;
+
+  > p {
+    max-width: 64ch;
+    font-size: 1.1rem;
+  }
+}
+
+.quote {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 28px 32px;
+  border-left: 6px solid var(--yellow);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--cream);
+  font-size: 1.15rem;
+  font-style: italic;
+
+  footer {
+    font-size: 1.5rem;
+    font-style: normal;
+  }
+}
+
+.othersTitle {
+  margin-bottom: 32px;
+}
+
+.others {
+  display: grid;
+  gap: 20px;
+
+  @include up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,191 @@
+@use "../../styles/mixins" as *;
+
+.wrapper {
+  display: grid;
+  gap: 32px;
+
+  @include up(lg) {
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+  }
+}
+
+.map {
+  position: relative;
+  aspect-ratio: 1280 / 720;
+}
+
+// La mappa è usata come maschera: le terre prendono il colore di sfondo,
+// così la stessa immagine va bene su qualsiasi tema.
+.land {
+  position: absolute;
+  inset: 0;
+  background: #34332e;
+  mask: url("/images/mappa/mondo.webp") center / contain no-repeat;
+}
+
+.pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  translate: -50% -50%;
+
+  span {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--paper);
+    box-shadow: 0 0 0 3px var(--black);
+    transition: transform 0.3s var(--ease-out);
+  }
+
+  &[data-active="true"] span {
+    background: var(--yellow);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px solid var(--yellow);
+      animation: pulse 2s var(--ease-out) infinite;
+    }
+  }
+
+  &:hover span,
+  &[aria-pressed="true"] span {
+    transform: scale(1.7);
+  }
+
+  &[aria-pressed="true"] span {
+    background: var(--yellow);
+    box-shadow:
+      0 0 0 3px var(--black),
+      0 0 0 5px var(--yellow);
+  }
+
+  @include down(sm) {
+    width: 22px;
+    height: 22px;
+
+    span {
+      width: 8px;
+      height: 8px;
+      box-shadow: 0 0 0 2px var(--black);
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.panel {
+  min-height: 280px;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius);
+  background: var(--ink);
+  border: 1px solid rgb(255 255 255 / 10%);
+
+  @include up(lg) {
+    grid-row: span 2;
+  }
+}
+
+.status {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.country {
+  margin: 8px 0 20px;
+  font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
+
+.projects {
+  display: grid;
+  gap: 18px;
+
+  li {
+    display: grid;
+    gap: 4px;
+    padding-top: 16px;
+    border-top: 1px solid rgb(255 255 255 / 12%);
+  }
+
+  h4 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    letter-spacing: 0;
+  }
+
+  p {
+    color: var(--muted-on-dark);
+    font-size: 0.95rem;
+  }
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  color: var(--yellow);
+  font-weight: 700;
+  text-decoration: none;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  button {
+    padding: 8px 14px;
+    border: 1.5px solid rgb(255 255 255 / 22%);
+    border-radius: 999px;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.25s,
+      color 0.25s,
+      border-color 0.25s;
+
+    &[data-active="true"] {
+      border-color: var(--yellow);
+    }
+
+    &:hover,
+    &[aria-pressed="true"] {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: var(--black);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Per hosting Apache/LiteSpeed (come quello del vecchio sito WordPress).
+# Stessa mappa di `_redirects`: se ne cambi una, cambia anche l'altra.
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteRule ^(storia|vision|mission)/?$ /chi-siamo/ [R=301,L]
+  RewriteRule ^attivi/?$ /progetti/ [R=301,L]
+  RewriteRule ^conclusi/?$ /progetti/#realizzati [R=301,NE,L]
+  RewriteRule ^impariamo-sorridendo-brasile/?$ /progetti/impariamo-sorridendo/ [R=301,L]
+  RewriteRule ^progetto-ninos-esperanza/?$ /progetti/ninos-esperanza/ [R=301,L]
+  RewriteRule ^(donations/)?progetto-newlife/?$ /progetti/newlife/ [R=301,L]
+  RewriteRule ^bomboniere-solidali/?$ /regali-solidali/#bomboniere [R=301,NE,L]
+  RewriteRule ^compleanno-alternativo/?$ /regali-solidali/#compleanno [R=301,NE,L]
+  RewriteRule ^idee-regalo/?$ /regali-solidali/#idee-regalo [R=301,NE,L]
+  RewriteRule ^bomboniere-idee-regalo/?$ /regali-solidali/ [R=301,L]
+  RewriteRule ^gallery-2/?$ /gallery/ [R=301,L]
+  RewriteRule ^news-ed-eventi/?$ /news-eventi/ [R=301,L]
+  RewriteRule ^simple-event/ /news-eventi/ [R=301,L]
+  RewriteRule ^wp-content/uploads/2019/02/RENDICONTAZIONE-2014-2018\.pdf$ /docs/rendicontazione-2014-2018.pdf [R=301,L]
+</IfModule>

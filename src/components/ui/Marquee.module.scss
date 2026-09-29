@@ -1,0 +1,40 @@
+.marquee {
+  overflow: hidden;
+  padding-block: clamp(14px, 2vw, 24px);
+  white-space: nowrap;
+}
+
+.dark {
+  --smile-face: var(--yellow);
+  --smile-ink: var(--black);
+
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.yellow {
+  --smile-face: var(--black);
+  --smile-ink: var(--yellow);
+
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+  width: max-content;
+  padding-right: clamp(20px, 3vw, 40px);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 1.2rem + 3.6vw, 4.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.mark {
+  width: 0.85em;
+  height: 0.85em;
+  flex: none;
+}

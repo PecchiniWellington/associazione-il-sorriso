@@ -1,0 +1,32 @@
+.page {
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  padding-top: var(--header-height);
+}
+
+.inner {
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+}
+
+.face {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(6rem, 4rem + 10vw, 14rem);
+  line-height: 1;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+  transition: transform 0.8s var(--ease-out);
+
+  &:hover {
+    transform: rotate(90deg) scaleX(-1);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

@@ -1,0 +1,17 @@
+@use "../../styles/mixins" as *;
+
+.head {
+  display: grid;
+  gap: 20px;
+  max-width: 820px;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+
+  @include up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,105 @@
+@use "../../styles/mixins" as *;
+
+.form {
+  display: grid;
+  gap: 24px;
+}
+
+.row {
+  display: grid;
+  gap: 24px;
+
+  @include up(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid var(--black);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    font: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--ink);
+    transition: box-shadow 0.25s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px var(--yellow);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  legend {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  span {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 2px solid var(--black);
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+  }
+
+  input:checked + span {
+    background: var(--black);
+    color: var(--yellow);
+  }
+
+  input:focus-visible + span {
+    outline: 3px solid var(--yellow-deep);
+    outline-offset: 2px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.note {
+  max-width: 40ch;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

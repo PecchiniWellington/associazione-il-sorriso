@@ -1,0 +1,104 @@
+@use "../../styles/mixins" as *;
+
+.rail {
+  overflow: hidden;
+  padding-block: var(--section-space);
+
+  @include up(md) {
+    display: flex;
+    align-items: center;
+    min-height: 100svh;
+    padding-block: calc(var(--header-height) + 24px) 48px;
+  }
+}
+
+.track {
+  display: grid;
+  gap: 24px;
+  padding-inline: var(--gutter);
+
+  @include up(md) {
+    display: flex;
+    align-items: stretch;
+    gap: 32px;
+    width: max-content;
+    padding-inline: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  }
+}
+
+.intro {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+
+  @include up(md) {
+    width: min(38vw, 520px);
+    margin: 0 48px 0 0;
+  }
+}
+
+.hint {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--yellow);
+
+  @include up(md) {
+    display: block;
+  }
+}
+
+.slot {
+  @include up(md) {
+    width: min(42vw, 560px);
+    flex: none;
+
+    > article {
+      height: 100%;
+    }
+  }
+}
+
+.all {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 24px;
+  padding: 40px;
+  border-radius: var(--radius);
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 1.2rem + 1.6vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-decoration: none;
+
+  --smile-face: var(--black);
+  --smile-ink: var(--yellow);
+
+  > svg:last-child {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  &:hover > svg:last-child {
+    transform: translateX(10px);
+  }
+
+  @include up(md) {
+    width: min(30vw, 400px);
+    flex: none;
+  }
+}
+
+.allMark {
+  width: 96px;
+  transition: transform 0.8s var(--ease-out);
+
+  .all:hover & {
+    transform: rotate(90deg);
+  }
+}

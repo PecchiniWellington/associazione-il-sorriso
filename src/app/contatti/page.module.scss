@@ -1,0 +1,96 @@
+@use "../../styles/mixins" as *;
+
+.grid {
+  display: grid;
+  gap: 48px;
+
+  @include up(md) {
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+    gap: 64px;
+  }
+}
+
+.channels {
+  display: grid;
+  gap: 20px;
+
+  ul {
+    display: grid;
+    gap: 10px;
+  }
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background: var(--cream);
+  }
+
+  > span:last-child {
+    display: grid;
+    min-width: 0;
+  }
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--yellow);
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.value {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.tax {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  color: var(--muted);
+}
+
+.formCard {
+  display: grid;
+  gap: 28px;
+  padding: clamp(28px, 4vw, 52px);
+  border-radius: var(--radius);
+  background: var(--cream);
+}

@@ -1,0 +1,9 @@
+.body {
+  display: grid;
+  gap: 16px;
+  max-width: calc(68ch + var(--gutter) * 2);
+
+  h2:not(:first-child) {
+    margin-top: 24px;
+  }
+}

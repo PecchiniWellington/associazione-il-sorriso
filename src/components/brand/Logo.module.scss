@@ -1,0 +1,26 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+
+  &:hover .mark {
+    transform: rotate(90deg);
+  }
+}
+
+.mark {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.word {
+  line-height: 1;
+}

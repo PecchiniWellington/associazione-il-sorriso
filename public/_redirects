@@ -1,0 +1,19 @@
+# Vecchi indirizzi del sito WordPress -> nuove pagine (Netlify / Cloudflare Pages).
+# Stessa mappa di `.htaccess`: se ne cambi una, cambia anche l'altra.
+/storia/                       /chi-siamo/                        301
+/vision/                       /chi-siamo/                        301
+/mission/                      /chi-siamo/                        301
+/attivi/                       /progetti/                         301
+/conclusi/                     /progetti/#realizzati              301
+/impariamo-sorridendo-brasile/ /progetti/impariamo-sorridendo/    301
+/progetto-ninos-esperanza/     /progetti/ninos-esperanza/         301
+/progetto-newlife/             /progetti/newlife/                 301
+/donations/progetto-newlife/   /progetti/newlife/                 301
+/bomboniere-solidali/          /regali-solidali/#bomboniere       301
+/compleanno-alternativo/       /regali-solidali/#compleanno       301
+/idee-regalo/                  /regali-solidali/#idee-regalo      301
+/bomboniere-idee-regalo/       /regali-solidali/                  301
+/gallery-2/                    /gallery/                          301
+/news-ed-eventi/               /news-eventi/                      301
+/simple-event/*                /news-eventi/                      301
+/wp-content/uploads/2019/02/RENDICONTAZIONE-2014-2018.pdf  /docs/rendicontazione-2014-2018.pdf  301

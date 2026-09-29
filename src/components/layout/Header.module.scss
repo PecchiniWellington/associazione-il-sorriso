@@ -1,0 +1,179 @@
+@use "../../styles/mixins" as *;
+
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  padding-top: 12px;
+  transition: transform 0.5s var(--ease-out);
+
+  &[data-hidden="true"] {
+    transform: translateY(-120%);
+  }
+}
+
+.bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: var(--header-height);
+}
+
+// Una «pillola» chiara dietro la barra: il menu resta leggibile su qualunque
+// sfondo (hero gialla, foto scure). Scorrendo prende anche un'ombra.
+.bar::before {
+  content: "";
+  position: absolute;
+  inset: 8px calc(var(--gutter) - 12px);
+  z-index: -1;
+  border-radius: 999px;
+  background: rgb(255 253 245 / 90%);
+  backdrop-filter: blur(14px);
+  transition:
+    opacity 0.4s,
+    box-shadow 0.4s;
+}
+
+.header[data-scrolled="true"] .bar::before {
+  box-shadow: 0 10px 40px -20px rgb(0 0 0 / 35%);
+}
+
+.header[data-open="true"] .bar::before {
+  opacity: 0;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 4px;
+}
+
+.desktopNav {
+  display: none;
+
+  ul {
+    display: flex;
+    gap: 4px;
+  }
+
+  @include up(lg) {
+    display: block;
+  }
+}
+
+.link {
+  position: relative;
+  display: block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background: rgb(11 11 11 / 7%);
+  }
+
+  &[aria-current="page"] {
+    background: var(--black);
+    color: var(--yellow);
+  }
+}
+
+.cta {
+  display: none;
+  min-height: 46px;
+
+  @include up(sm) {
+    display: inline-flex;
+  }
+}
+
+.burger {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--black);
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    border-radius: 2px;
+    background: var(--yellow);
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  &[aria-expanded="true"] span:first-child {
+    transform: translateY(4.75px) rotate(45deg);
+  }
+
+  &[aria-expanded="true"] span:last-child {
+    transform: translateY(-4.75px) rotate(-45deg);
+  }
+
+  @include up(lg) {
+    display: none;
+  }
+}
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+  background: var(--yellow);
+  color: var(--black);
+  visibility: hidden;
+  overflow-y: auto;
+}
+
+.menuList {
+  display: grid;
+  gap: 2px;
+}
+
+.menuItem {
+  overflow: hidden;
+
+  a {
+    display: inline-block;
+    padding-block: 4px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 9vw, 3.6rem);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    text-decoration: none;
+  }
+}
+
+.menuFoot {
+  display: grid;
+  gap: 10px;
+  margin-top: 40px;
+  font-weight: 600;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

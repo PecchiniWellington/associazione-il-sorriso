@@ -1,0 +1,107 @@
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(36px, 5vw, 56px);
+
+  h2 {
+    max-width: 16ch;
+    margin-top: 16px;
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+
+  button {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background-color 0.25s,
+      color 0.25s;
+
+    &:hover {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--yellow);
+    }
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  padding-inline: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  padding-bottom: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(
+    var(--gutter),
+    calc((100vw - var(--container)) / 2)
+  );
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: none;
+  width: min(84vw, 460px);
+  scroll-snap-align: start;
+
+  figure {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 16px;
+    height: 100%;
+    padding: clamp(28px, 3vw, 40px);
+    border-radius: var(--radius);
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  blockquote p {
+    font-size: 1.15rem;
+    line-height: 1.55;
+  }
+
+  figcaption {
+    display: grid;
+    gap: 2px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 0.9rem;
+    color: var(--muted);
+
+    :global(.hand) {
+      font-size: 1.7rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+  }
+}
+
+.quoteMark {
+  display: block;
+  height: 0.55em;
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 0.9;
+  color: var(--yellow-deep);
+}

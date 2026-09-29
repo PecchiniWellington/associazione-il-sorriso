@@ -1,0 +1,174 @@
+@use "../../styles/mixins" as *;
+
+.footer {
+  background: var(--black);
+  color: var(--paper);
+  padding-block: clamp(72px, 10vw, 128px) 32px;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--yellow);
+    }
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: clamp(48px, 8vw, 96px);
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+}
+
+.claim {
+  max-width: 12ch;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.mark {
+  width: clamp(96px, 18vw, 220px);
+  flex: none;
+  animation: spin 18s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 48px 32px;
+  padding-block: 56px;
+
+  @include up(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include up(lg) {
+    grid-template-columns: 1.3fr 1fr 0.8fr 1.2fr;
+  }
+}
+
+.brand {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+
+  :global(.hand) {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--yellow);
+    max-width: 22ch;
+  }
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+
+  a {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1.5px solid rgb(255 255 255 / 25%);
+    border-radius: 50%;
+    transition:
+      background-color 0.25s,
+      color 0.25s,
+      border-color 0.25s;
+
+    &:hover {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: var(--black);
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.heading {
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-on-dark);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  font-style: normal;
+}
+
+.support {
+  display: grid;
+  gap: 18px;
+
+  dt {
+    font-size: 0.85rem;
+    color: var(--muted-on-dark);
+  }
+
+  dd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 4px 0 0;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  button:hover {
+    background: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--black);
+  }
+}
+
+.iban {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+  font-size: 0.9rem;
+  color: var(--muted-on-dark);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
