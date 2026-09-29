@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { site } from "@/data/site";
+import { basePath } from "@/lib/paths";
 import "@/styles/globals.scss";
 
 const display = Bricolage_Grotesque({
@@ -31,6 +32,8 @@ export const metadata: Metadata = {
     template: `%s · ${site.legalName}`,
   },
   description: site.description,
+  // L'anteprima su GitHub Pages non deve finire su Google al posto del sito.
+  robots: basePath ? { index: false, follow: false } : undefined,
   openGraph: {
     type: "website",
     locale: "it_IT",

@@ -1,4 +1,5 @@
 import manifest from "@/data/images.generated.json";
+import { asset } from "@/lib/paths";
 
 export type ImageKey = keyof typeof manifest;
 
@@ -20,8 +21,8 @@ export function photo(key: ImageKey, alt: string, caption?: string): Photo {
   if (!entry) throw new Error(`Immagine assente dal manifest: ${key}`);
   const { width, height } = entry;
   return {
-    src: `/images/${key}.webp`,
-    thumb: `/images/${key}.thumb.webp`,
+    src: asset(`/images/${key}.webp`),
+    thumb: asset(`/images/${key}.thumb.webp`),
     width,
     height,
     alt,

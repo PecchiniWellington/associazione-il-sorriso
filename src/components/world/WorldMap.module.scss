@@ -16,12 +16,13 @@
 }
 
 // La mappa è usata come maschera: le terre prendono il colore di sfondo,
-// così la stessa immagine va bene su qualsiasi tema.
+// così la stessa immagine va bene su qualsiasi tema. L'URL arriva dal
+// componente (`--land`), che conosce il prefisso del sito.
 .land {
   position: absolute;
   inset: 0;
   background: #34332e;
-  mask: url("/images/mappa/mondo.webp") center / contain no-repeat;
+  mask: var(--land) center / contain no-repeat;
 }
 
 .pin {

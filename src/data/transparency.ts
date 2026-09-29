@@ -1,3 +1,5 @@
+import { asset } from "@/lib/paths";
+
 /** Dal PDF «Rendicontazione 2014–2018» (`public/docs`). Importi in euro. */
 export type ReportYear = {
   year: number;
@@ -6,7 +8,7 @@ export type ReportYear = {
   funded: { name: string; amount: number }[];
 };
 
-export const reportPdf = "/docs/rendicontazione-2014-2018.pdf";
+export const reportPdf = asset("/docs/rendicontazione-2014-2018.pdf");
 
 export const report: ReportYear[] = [
   {

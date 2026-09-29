@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { type CSSProperties, useRef, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { places } from "@/data/world";
 import { gsap, MOTION_OK, useGSAP } from "@/lib/gsap";
+import { asset } from "@/lib/paths";
 import styles from "./WorldMap.module.scss";
 
 export function WorldMap() {
@@ -52,7 +53,15 @@ export function WorldMap() {
   return (
     <div ref={root} className={styles.wrapper}>
       <div className={styles.map} data-map>
-        <div className={styles.land} aria-hidden="true" />
+        <div
+          className={styles.land}
+          style={
+            {
+              "--land": `url(${asset("/images/mappa/mondo.webp")})`,
+            } as CSSProperties
+          }
+          aria-hidden="true"
+        />
         {places.map((place) => (
           <button
             key={place.id}
