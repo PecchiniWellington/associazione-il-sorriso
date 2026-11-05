@@ -1,5 +1,6 @@
 # Vecchi indirizzi del sito WordPress -> nuove pagine (Netlify / Cloudflare Pages).
 # Stessa mappa di `.htaccess`: se ne cambi una, cambia anche l'altra.
+/about-us/                     /chi-siamo/                        301
 /storia/                       /chi-siamo/                        301
 /vision/                       /chi-siamo/                        301
 /mission/                      /chi-siamo/                        301
@@ -15,5 +16,6 @@
 /bomboniere-idee-regalo/       /regali-solidali/                  301
 /gallery-2/                    /gallery/                          301
 /news-ed-eventi/               /news-eventi/                      301
+/blog/                         /news-eventi/                      301
 /simple-event/*                /news-eventi/                      301
 /wp-content/uploads/2019/02/RENDICONTAZIONE-2014-2018.pdf  /docs/rendicontazione-2014-2018.pdf  301

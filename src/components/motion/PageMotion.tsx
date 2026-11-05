@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { gsap, MOTION_OK, ScrollTrigger, SplitText, useGSAP } from "@/lib/gsap";
 import styles from "./PageMotion.module.scss";
@@ -140,6 +141,11 @@ function drawStrokes(root: HTMLElement) {
 export function PageMotion({ children }: { children: React.ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
   const curtain = useRef<HTMLDivElement>(null);
+  // Il template si rimonta solo quando cambia il primo segmento dell'URL: da
+  // /progetti/ a /progetti/newlife/ (o da un progetto all'altro) resta montato.
+  // Legare le animazioni al percorso le fa ripartire a ogni pagina nuova,
+  // altrimenti i suoi elementi resterebbero nascosti.
+  const pathname = usePathname();
 
   useGSAP(
     () => {
@@ -165,7 +171,7 @@ export function PageMotion({ children }: { children: React.ReactNode }) {
       });
       hasNavigated = true;
     },
-    { scope: root }
+    { scope: root, dependencies: [pathname], revertOnUpdate: true }
   );
 
   return (

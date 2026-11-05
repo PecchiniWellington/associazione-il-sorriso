@@ -5,18 +5,25 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  RewriteRule ^(storia|vision|mission)/?$ /chi-siamo/ [R=301,L]
-  RewriteRule ^attivi/?$ /progetti/ [R=301,L]
-  RewriteRule ^conclusi/?$ /progetti/#realizzati [R=301,NE,L]
-  RewriteRule ^impariamo-sorridendo-brasile/?$ /progetti/impariamo-sorridendo/ [R=301,L]
-  RewriteRule ^progetto-ninos-esperanza/?$ /progetti/ninos-esperanza/ [R=301,L]
-  RewriteRule ^(donations/)?progetto-newlife/?$ /progetti/newlife/ [R=301,L]
-  RewriteRule ^bomboniere-solidali/?$ /regali-solidali/#bomboniere [R=301,NE,L]
-  RewriteRule ^compleanno-alternativo/?$ /regali-solidali/#compleanno [R=301,NE,L]
-  RewriteRule ^idee-regalo/?$ /regali-solidali/#idee-regalo [R=301,NE,L]
-  RewriteRule ^bomboniere-idee-regalo/?$ /regali-solidali/ [R=301,L]
-  RewriteRule ^gallery-2/?$ /gallery/ [R=301,L]
-  RewriteRule ^news-ed-eventi/?$ /news-eventi/ [R=301,L]
-  RewriteRule ^simple-event/ /news-eventi/ [R=301,L]
-  RewriteRule ^wp-content/uploads/2019/02/RENDICONTAZIONE-2014-2018\.pdf$ /docs/rendicontazione-2014-2018.pdf [R=301,L]
+  # Sempre https://www. Dietro il proxy di Aruba %{HTTPS} è affidabile
+  # (verificato dal vivo); per il dominio senza www ci pensa già Aruba.
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://www.associazioneilsorriso.it%{REQUEST_URI} [R=301,NE,L]
+
+  # Destinazioni assolute: con un percorso relativo Apache, dietro il proxy,
+  # risponderebbe con http://.
+  RewriteRule ^(about-us|storia|vision|mission)/?$ https://www.associazioneilsorriso.it/chi-siamo/ [R=301,L]
+  RewriteRule ^attivi/?$ https://www.associazioneilsorriso.it/progetti/ [R=301,L]
+  RewriteRule ^conclusi/?$ https://www.associazioneilsorriso.it/progetti/#realizzati [R=301,NE,L]
+  RewriteRule ^impariamo-sorridendo-brasile/?$ https://www.associazioneilsorriso.it/progetti/impariamo-sorridendo/ [R=301,L]
+  RewriteRule ^progetto-ninos-esperanza/?$ https://www.associazioneilsorriso.it/progetti/ninos-esperanza/ [R=301,L]
+  RewriteRule ^(donations/)?progetto-newlife/?$ https://www.associazioneilsorriso.it/progetti/newlife/ [R=301,L]
+  RewriteRule ^bomboniere-solidali/?$ https://www.associazioneilsorriso.it/regali-solidali/#bomboniere [R=301,NE,L]
+  RewriteRule ^compleanno-alternativo/?$ https://www.associazioneilsorriso.it/regali-solidali/#compleanno [R=301,NE,L]
+  RewriteRule ^idee-regalo/?$ https://www.associazioneilsorriso.it/regali-solidali/#idee-regalo [R=301,NE,L]
+  RewriteRule ^bomboniere-idee-regalo/?$ https://www.associazioneilsorriso.it/regali-solidali/ [R=301,L]
+  RewriteRule ^gallery-2/?$ https://www.associazioneilsorriso.it/gallery/ [R=301,L]
+  RewriteRule ^(news-ed-eventi|blog)/?$ https://www.associazioneilsorriso.it/news-eventi/ [R=301,L]
+  RewriteRule ^simple-event/ https://www.associazioneilsorriso.it/news-eventi/ [R=301,L]
+  RewriteRule ^wp-content/uploads/2019/02/RENDICONTAZIONE-2014-2018\.pdf$ https://www.associazioneilsorriso.it/docs/rendicontazione-2014-2018.pdf [R=301,L]
 </IfModule>

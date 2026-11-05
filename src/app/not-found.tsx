@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import styles from "./not-found.module.scss";
+
+export const metadata: Metadata = {
+  title: "Pagina non trovata",
+  robots: { index: false },
+};
 
 export default function NotFound() {
   return (

@@ -1,0 +1,47 @@
+# Pubblica il sito su www.associazioneilsorriso.it (hosting Aruba) via FTP.
+#
+# Parte a ogni push su `main`, o a mano da Actions -> Deploy Aruba -> Run
+# workflow. Carica solo i file cambiati: lo stato dell'ultimo deploy sta in
+# `.ftp-deploy-sync-state.json` sul server.
+#
+# Secrets da impostare nel repository (Settings -> Secrets and variables):
+#   FTP_SERVER     ftplnx02.aruba.it (il nome del certificato TLS di Aruba:
+#                  con ftp.associazioneilsorriso.it la verifica fallisce)
+#   FTP_USERNAME
+#   FTP_PASSWORD
+# Variabile FTP_SERVER_DIR: la cartella del sito vista via FTP, cioè
+# `www.associazioneilsorriso.it/` (accanto ci sono i backup di Aruba).
+name: Deploy Aruba
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-aruba
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://www.associazioneilsorriso.it
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # Niente NEXT_PUBLIC_BASE_PATH: sul dominio vero il sito sta alla radice.
+      - run: npm run build
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./out/
+          server-dir: ${{ vars.FTP_SERVER_DIR || 'www.associazioneilsorriso.it/' }}
