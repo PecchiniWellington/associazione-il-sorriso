@@ -99,6 +99,9 @@ export function Footer() {
             <li>
               <Link href="/cookie-policy/">Cookie policy</Link>
             </li>
+            <li>
+              <a href="https://wellintone.com">Sito di Wellintone</a>
+            </li>
           </ul>
         </div>
       </div>
